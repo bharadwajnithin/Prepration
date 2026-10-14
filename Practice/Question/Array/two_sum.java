@@ -43,6 +43,22 @@ public class two_sum {
 		}
 		return new int[] {-1, -1};
 	}
-	
+	static int[] twosum3(int[] arr, int target) {
+		
+		HashMap<Integer, Integer> store = new HashMap<>();
+		
+		for(int i=0; i<arr.length; i++) {
+			
+			
+			int needed = target - arr[i];
+			
+			if(store.containsKey(needed)) {
+				return new int[] {store.get(needed),i};
+			}
+			
+			store.put(arr[i], i);
+		}
+		return new int[] {-1, -1};
+	}
 
 }
