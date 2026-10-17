@@ -125,3 +125,31 @@ public class delete_nth_node_from_end_of_list {
 
 
 }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		delete_nth_node_from_end_of_list list = new delete_nth_node_from_end_of_list();
+		
+		list.append(10);
+//		list.append(20);
+//		list.append(30);
+//		list.append(40);
+		
+		System.out.println("Linked list");
+		list.display();
+		
+		//list.delete(4);
+		
+		//System.out.println("After");
+		//list.display();
+		
+//		Linked list
+//		10 -> 20 -> 30 -> 40 -> null
+//		After
+//		10 -> 30 -> 40 -> null
+
+		list.delete_tail();
+		System.out.println("After");
+		list.display();
+		
+	}
